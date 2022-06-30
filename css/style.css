@@ -67,7 +67,8 @@ body {
 }
 
 .nav a:hover {
-    border-bottom: 1px solid #342a21;
+    border-bottom: 1px solid #71816d;
+    font-style: italic;
 }
 
 .content {
@@ -77,71 +78,86 @@ body {
 }
 
 #about {
+    height: 65vh;
     max-width: 1440px;
+    padding-top: 15vh;
     padding-bottom: 25px;
-    border-bottom: 2px solid #71816d;
+    
 }
 
 #about h1 {
-    font-size: 60px;
+    font-size: 80px;
+    font-weight: bold;
 }
 
 #about h2 {
     margin-top: 10px;
     font-size: 30px;
     line-height: 1;
-    font-style: italic;
+    font-weight: 300;
 }
 
 #about p {
     margin-top: 10px;
     text-align: end;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 #skills {
     max-width: 1440px;
-    margin-top: 50px;
+    margin-top: 130px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-bottom: 25px;
-    border-bottom: 2px solid #71816d;
+    border-bottom: 1px solid #71816d;
+    position: relative;
+    
 }
 
 #skills h2 {
     font-style: italic;
     font-size: 30px;
-    position: relative;
+    font-weight: 200;    
 }
+
 
 @keyframes seta {
     from {
-        left: 120%;
+        right: 50%;
+        top: 35vh;
     }
 
     to {
-        left: 140%;
+        right: 50%;
+        top: 37vh;
     }
 }
 
 #skills h2::after {
-    content: "→";
+    content: "🠓";
     position: absolute;
-    color: #342a21;
-    animation: seta 0.5s ease-in 0s infinite alternate;
+    color: #da667b;
+    animation: seta 0.7s ease-in 0s infinite alternate;
 }
+
+
 
 #skills ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 15px;
     padding-top: 10px;
 }
 
 .skills-list li {
     font-size: 30px;
+}
+
+.skills-list li::before {
+    content: "// ";
+    font-weight: 200;
 }
 
 .skills-list li:hover {
@@ -151,12 +167,15 @@ body {
 
 #work {
     max-width: 1440px;
-    margin-top: 50px;
+    padding-top: 50px;
 }
 
-#work h2 {
+#work > h2 {
     font-style: italic;
     font-size: 30px;
+    font-weight: 200;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #342a21;
 }
 
 .project {
@@ -164,13 +183,25 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr;
     margin-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #71816d;
+}
+
+.project-info h2 {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 30px;
 }
 
 .project-info h3 {
     margin-top: 10px;
 }
 
-.project-info li {
+.technologies {
+    margin-top: 25px;
+}
+
+.technologies li {
     margin-top: 10px;
 }
 
@@ -186,7 +217,7 @@ body {
 
 .footer {
     background-color: #C9B79C;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .footer-content {
